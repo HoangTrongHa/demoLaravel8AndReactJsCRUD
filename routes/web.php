@@ -24,5 +24,3 @@ Route::get('/getItem/{id}', [ItemController::class, 'detail' ])->name('Item.deta
 Route::post('/creat-new-item', [ItemController::class, 'store' ])->name('Item.store');
 Route::post('/edit-item/{id}', [ItemController::class, 'update' ])->name('Item.edit');
 Route::post('/delete/{id}', [ItemController::class, 'delete' ])->name('Item.delete');
-
-

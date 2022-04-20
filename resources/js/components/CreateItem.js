@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import constHttp from "../const";
-import { Redirect } from 'react-router';
 import { useNavigate } from "react-router-dom";
 class CreateItem extends Component {
   constructor(props){
@@ -30,6 +29,7 @@ class CreateItem extends Component {
     }
     let uri = `${constHttp.http}/creat-new-item`
     axios.post(uri, products).then((response) => {
+      console.log(response);
       // navigate("../Master", { replace: true });
     });
   }

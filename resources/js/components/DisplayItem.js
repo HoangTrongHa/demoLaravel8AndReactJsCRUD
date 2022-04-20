@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import constHttp from "../const";
 
 export default function DisplayItem() {
     const [products, setProducts] = useState([])
@@ -9,7 +9,7 @@ export default function DisplayItem() {
         fetchProducts() 
     },[])
     const fetchProducts = async () => {
-        await axios.get(`http://127.0.0.1:8000/getListItem`).then(({data})=>{
+        await axios.get(`${constHttp.http}/getListItem`).then(({data})=>{
             setProducts(data)
         })
     }
